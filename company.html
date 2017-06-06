@@ -1,0 +1,527 @@
+<div class="pageContent">
+
+
+    <div class="tabs" currentIndex="0" eventType="click">
+        <div class="tabsHeader">
+            <div class="tabsHeaderContent">
+                <ul>
+                    <li><a href="javascript:;"><span>基本信息</span></a></li>
+                    <li><a href="javascript:;"><span>股东信息</span></a></li>
+                    <li><a href="javascript:;"><span>高管人员</span></a></li>
+                    <li><a href="javascript:;"><span>员工信息</span></a></li>
+                    <li><a href="javascript:;"><span>公司架构</span></a></li>
+                    <li><a href="javascript:;"><span>分支机构</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tabsContent">
+            <div>
+                <form method="post" action="demo/common/ajaxDone.html" class="pageForm required-validate"
+                      onsubmit="return validateCallback(this, navTabAjaxDone);">
+                    <div class="pageFormContent" layoutH="56">
+                        <p style="width:760px ">
+                            <label>机构名称：</label>
+                            <input name="sn" type="text" size="60" value="济南尚品民间资本管理有限公司" readonly="readonly"/>
+                        </p>
+                        <p>
+                            <label>注册资本（万元）：</label>
+                            <input class="required" type="text"/>
+                        </p>
+                        <p>
+                            <label>组织机构代码：</label>
+                            <input class="required" type="text"/>
+                        </p>
+                        <p>
+                            <label>社会信用代码：</label>
+                            <input class="required" type="text"/>
+                        </p>
+                        <p>
+                            <label>组织形式：</label>
+                            <input class="required" type="text"/>
+                        </p>
+                        <p>
+                            <label>业务许可证号：</label>
+                            <input class="required" type="text"/>
+                        </p>
+                        <p>
+                            <label>许可证到期时间：</label>
+                            <input class="required" type="text"/>
+                        </p>
+                        <p>
+                            <label>批复文号：</label>
+                            <input class="required" type="text"/>
+                        </p>
+                        <p>
+                            <label>法定代表：</label>
+                            <input class="required" type="text"/>
+                        </p>
+                        <p>
+                            <label>批复日期：</label>
+                            <input class="required" type="text"/>
+                        </p>
+                        <p>
+                            <label>注册地：</label>
+                            <input class="required" type="text"/>
+                        </p>
+                        <p>
+                            <label>详细地址：</label>
+                            <input class="required" size="30" type="text"/>
+                        </p>
+                        <div class="divider"></div>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label>业务范围：</label></td>
+                                    <td><label><input type="checkbox" name="c1" value="1"/>股权投资</label>
+                                        <label><input type="checkbox" name="c1" value="2"/>债权投资</label>
+                                        <label><input type="checkbox" name="c1" value="3"/>短期财务性投资</label>
+                                        <label><input type="checkbox" name="c1" value="4"/>资本投资咨询</label>
+                                        <label><input type="checkbox" name="c1" value="5"/>受托资产管理</label>
+                                        <label><input type="checkbox" name="c1" value="6"/>债券投资</label>
+                                        <label><input type="checkbox" name="c1" value="7"/>私募基金管理</label>
+                                        <label><input type="checkbox" name="c1" value="8"/>资产证券化</label>
+                                        <label><input type="checkbox" name="c1" value="9"/>不良资产收购处置</label>
+                                        <label><input type="checkbox" name="c1" value="10"/>资金供需信息对接</label></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="divider"></div>
+
+                        <p>
+                            <label>登记机关：</label>
+                            <input class="required" type="text"/>
+                        </p>
+                        <p>
+                            <label>成立日期：</label>
+                            <input type="text" name="startDate" class="date required"/><a class="inputDateButton"
+                                                                                           href="javascript:;">选择</a>
+                        </p>
+
+                        <p>
+                            <label>经营状态：</label>
+                            <select name="capital" class="required combox">
+                                <option value="">正常经营</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label>经营区域类型：</label>
+                            <select name="capital" class="required combox">
+                                <option value="">全市</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label>经营区域：</label>
+                            <input type="text" class="required" name="orgLookup.orgName" value=""
+                                   suggestFields="orgNum,orgName" suggestUrl="demo/database/db_lookupSuggest.html"
+                                   lookupGroup="orgLookup"/>
+                            <a class="btnLook" href="demo/database/dwzOrgLookup.html" lookupGroup="orgLookup">查找带回</a>
+                        </p>
+                        <p>
+                            <label>部门名称：</label>
+                            <input type="hidden" name="orgLookup.id" value="${orgLookup.id}"/>
+                            <input type="text" class="required" name="orgLookup.orgName" value=""
+                                   suggestFields="orgNum,orgName" suggestUrl="demo/database/db_lookupSuggest.html"
+                                   lookupGroup="orgLookup"/>
+                            <a class="btnLook" href="demo/database/dwzOrgLookup.html" lookupGroup="orgLookup">查找带回</a>
+                        </p>
+                        <p>
+                            <label>部门编号：</label>
+                            <input type="text" readonly="readonly" value="" name="dwz_orgLookup.orgNum"
+                                   class="textInput">
+                        </p>
+                        <p>
+                            <label>识 别 码：</label>
+                            <input name="code" class="digits" type="text" size="30" alt="请输入数字"/>
+                        </p>
+                        <p>
+                            <label>客户类型：</label>
+                            <select name="type" class="required combox">
+                                <option value="">请选择</option>
+                                <option value="个人">个人</option>
+                                <option value="公司" selected>公司</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label>营业执照号：</label>
+                            <input type="text" size="30"/>
+                        </p>
+                        <p>
+                            <label>执照签发日期：</label>
+                            <input type="text" name="startDate" class="date" size="30"/><a class="inputDateButton"
+                                                                                           href="javascript:;">选择</a>
+                        </p>
+                        <p>
+                            <label>执照到期日期：</label>
+                            <input type="text" name="endDate" class="date" size="30"/><a class="inputDateButton"
+                                                                                         href="javascript:;">选择</a>
+                        </p>
+                        <p>
+                            <label>注册资金：</label>
+                            <select name="capital" class="required combox">
+                                <option value="">请选择</option>
+                                <option value="10">10</option>
+                                <option value="50" selected>50</option>
+                                <option value="100">100</option>
+                            </select>
+                            <span class="unit">万元</span>
+                        </p>
+                        <p>
+                            <label>注册类型：</label>
+                            <input type="text" size="30"/>
+                        </p>
+                        <p>
+                            <label>注册地址：</label>
+                            <input type="text" size="30"/>
+                        </p>
+                        <p>
+                            <label>所属行业：</label>
+                            <input type="text" size="30"/>
+                        </p>
+                        <p>
+                            <label>组织机构代码：</label>
+                            <input type="text" size="30"/>
+                        </p>
+                        <p>
+                            <label>国税登记证号码：</label>
+                            <input type="text" size="30"/>
+                        </p>
+                        <p>
+                            <label>地税登记证号码：</label>
+                            <input type="text" size="30"/>
+                        </p>
+                        <p>
+                            <label>贷款卡编码：</label>
+                            <input type="text" size="30"/>
+                        </p>
+                        <p>
+                            <label>法人姓名：</label>
+                            <input type="text" size="30"/>
+                        </p>
+                        <p>
+                            <label>法人代表身份证号：</label>
+                            <input type="text" size="30"/>
+                        </p>
+                        <p>
+                            <label>身份证到期日期：</label>
+                            <input type="text" size="30"/>
+                        </p>
+                        <p>
+                            <label>其他证件及号码：</label>
+                            <input type="text" size="30"/>
+                        </p>
+                        <p>
+                            <label>曾用名称：</label>
+                            <input type="text" size="30"/>
+                        </p>
+                        <p>
+                            <label>首次贷款日期：</label>
+                            <input readonly="readonly" type="text" size="30"/>
+                        </p>
+                        <div class="divider"></div>
+                        <p>
+                            <label>建档日期：</label>
+                            <input readonly="readonly" type="text" size="30"/>
+                        </p>
+                        <p>
+                            <label>管户经理：</label>
+                            <input readonly="readonly" type="text" size="30"/>
+                        </p>
+                        <p>
+                            <label>最新修改时间：</label>
+                            <input readonly="readonly" type="text" size="30"/>
+                        </p>
+                        <p>
+                            <label>最新修改人员：</label>
+                            <input readonly="readonly" type="text" size="30"/>
+                        </p>
+                    </div>
+                    <div class="formBar">
+                        <ul>
+                            <!--<li><a class="buttonActive" href="javascript:;"><span>保存</span></a></li>-->
+                            <li>
+                                <div class="buttonActive">
+                                    <div class="buttonContent">
+                                        <button type="submit">保存</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="button">
+                                    <div class="buttonContent">
+                                        <button type="button" class="close">取消</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <div class="panelBar">
+                    <ul class="toolBar">
+                        <li><a class="add" href="demo_page4.html" target="dialog"><span>新增</span></a></li>
+                        <li><a class="edit" href="demo_page4.html?uid={sid_user}" target="dialog"><span>修改</span></a>
+                        </li>
+                        <li><a class="delete" href="demo/common/ajaxDone.html?uid={sid_user}" target="ajaxTodo"
+                               title="确定要删除吗?"><span>删除</span></a></li>
+                        <li class="line">line</li>
+                        <li><a class="icon" href="demo/common/dwz-team.xls" target="dwzExport" targetType="navTab"
+                               title="实要导出这些记录吗?"><span>导出</span></a></li>
+                    </ul>
+                </div>
+                <table class="table" width="100%" layoutH="138">
+                    <thead>
+                    <tr>
+                        <th width="40" align="center">序号</th>
+                        <th width="60" align="center">姓名</th>
+                        <th width="60" align="center">证件类型</th>
+                        <th width="150" align="center">证件号码</th>
+                        <th width="60" align="center">职务</th>
+                        <th width="40" align="center">性别</th>
+                        <th width="100" align="center">户籍行政区域</th>
+                        <th width="80">联系方式</th>
+                        <th width="80">电子邮件</th>
+                        <th width="120">工作单位</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    <tr target="sid_user" rel="1">
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>身份证</td>
+                        <td>29385739203816293</td>
+                        <td>经理</td>
+                        <td>女</td>
+                        <td>山东省-济南市-历下区</td>
+                        <td>18888885555</td>
+                        <td>xxxxx@163.com</td>
+                        <td>济南西里科技开发有限公司</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div></div>
+        </div>
+        <div class="tabsFooter">
+            <div class="tabsFooterContent"></div>
+        </div>
+    </div>
+</div>
+</div>
