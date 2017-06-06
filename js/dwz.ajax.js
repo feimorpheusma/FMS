@@ -291,7 +291,7 @@ function ajaxTodo(url, callback){
 	var $callback = callback || navTabAjaxDone;
 	if (! $.isFunction($callback)) $callback = eval('(' + callback + ')');
 	$.ajax({
-		type:'POST',
+		type:'GET',
 		url:url,
 		dataType:"json",
 		cache: false,
