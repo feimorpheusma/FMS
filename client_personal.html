@@ -1,0 +1,92 @@
+
+
+<div class="pageHeader">
+	<form onsubmit="return navTabSearch(this);" action="demo/common/ajaxDone.html" method="get">
+	<div class="searchBar">
+		<table class="searchContent">
+			<tr>
+				<td>
+					姓名：<input type="text" name="keyword" />
+				</td>
+				<td>
+					身份证号：<input type="text" name="keyword" />
+				</td>
+				<td>
+					<div class="buttonActive">	<div class="buttonContent"><button type="submit"> &nbsp;搜 索 &nbsp;</button></div></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="client_personal_detail.html" target="dialog" height="570" mask="true"><span>新增</span></a></li>
+			<li><a class="edit" href="client_personal_detail.html?uid={sid_user}" target="dialog" height="570" mask="true"><span>修改</span></a></li>
+			<li><a class="edit" href="client_personal_detail.html?uid={sid_user}" target="dialog" height="570" mask="true"
+				   ><span>查看</span></a>
+			</li>
+			<li><a class="delete" href="demo/common/ajaxDone.html" target="ajaxTodo"
+				   title="确定要删除吗?"><span>删除</span></a></li>
+			<li><a class="icon"><span>变更记录</span></a></li>
+			<li class="line">line</li>
+			<li><a class="icon" href="#" target="dwzExport" targetType="navTab"
+				   title="实要导出这些记录吗?"><span>导出</span></a></li>
+		</ul>
+	</div>
+	<table class="table" width="100%" layoutH="138">
+		<thead>
+			<tr>
+				<th width="40" align="center">序号</th>
+				<th width="60" align="center">姓名</th>
+				<th width="60" align="center">证件类型</th>
+				<th width="150" align="center">证件号码</th>
+				<th width="60" align="center">职务</th>
+				<th width="40" align="center">性别</th>
+				<th width="100" align="center">户籍行政区域</th>
+				<th width="80">联系方式</th>
+				<th width="80">电子邮件</th>
+				<th width="120">工作单位</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr target="sid_user" rel="1">
+			<td>1</td>
+			<td>黄蓉</td>
+			<td>身份证</td>
+			<td>29385739203816293</td>
+			<td>经理</td>
+			<td>女</td>
+			<td>山东省-济南市-历下区</td>
+			<td>18888885555</td>
+			<td>xxxxx@163.com</td>
+			<td>济南西里科技开发有限公司</td>
+		</tr>
+		<tr target="sid_user" rel="1">
+			<td>2</td>
+			<td>郭靖</td>
+			<td>身份证</td>
+			<td>125643212454136444</td>
+			<td>职员</td>
+			<td>男</td>
+			<td>山东省-济南市-历下区</td>
+			<td>156645456474</td>
+			<td>xxxxx@163.com</td>
+			<td>济南西里科技开发有限公司</td>
+		</tr>
+		<tr target="sid_user" rel="1">
+			<td>3</td>
+			<td>洪七公</td>
+			<td>身份证</td>
+			<td>4779846546754564646</td>
+			<td>经理</td>
+			<td>男</td>
+			<td>山东省-济南市-历下区</td>
+			<td>15564545444</td>
+			<td>xxxxx@163.com</td>
+			<td>济南西里科技开发有限公司</td>
+		</tr>
+		</tbody>
+	</table>
+</div>

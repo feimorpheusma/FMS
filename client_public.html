@@ -1,0 +1,78 @@
+<div class="pageHeader">
+	<form onsubmit="return navTabSearch(this);" action="demo/common/ajaxDone.html" method="get">
+		<div class="searchBar">
+			<table class="searchContent">
+				<tr>
+					<td>
+						客户名称：<input type="text" name="keyword" />
+					</td>
+					<td>
+						社会信用代码：<input type="text" name="keyword" />
+					</td>
+					<td>
+						<div class="buttonActive">	<div class="buttonContent"><button type="submit"> &nbsp;搜 索 &nbsp;</button></div></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="client_public_detail.html" target="dialog" height="500" mask="true"><span>新增</span></a></li>
+			<li><a class="edit" href="client_public_detail.html?uid={sid_user}" target="dialog" height="500" mask="true"><span>修改</span></a></li>
+			<li><a class="edit" href="client_public_detail.html?uid={sid_user}" target="dialog" height="500" mask="true"
+			><span>查看</span></a>
+			</li>
+			<li><a class="delete" href="demo/common/ajaxDone.html" target="ajaxTodo"
+				   title="确定要删除吗?"><span>删除</span></a></li>
+			<li><a class="icon"><span>变更记录</span></a></li>
+			<li class="line">line</li>
+			<li><a class="icon" href="#" target="dwzExport" targetType="navTab"
+				   title="实要导出这些记录吗?"><span>导出</span></a></li>
+		</ul>
+	</div>
+	<table class="table" width="100%" layoutH="138">
+		<thead>
+		<tr>
+			<th width="40" align="center">序号</th>
+			<th width="60" align="center">客户名称</th>
+			<th width="150" align="center">社会信用代码</th>
+			<th width="100" align="center">行政区域</th>
+			<th width="60" align="center">法人</th>
+			<th width="150" align="center">证件号码</th>
+			<th width="80">证件类型</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr target="sid_user" rel="1">
+			<td>1</td>
+			<td>山东科美科技有限公司</td>
+			<td>29385739203816293</td>
+			<td>山东省-济南市-历下区</td>
+			<td>张无忌</td>
+			<td>35454565465746165461</td>
+			<td>身份证</td>
+		</tr>
+		<tr target="sid_user" rel="1">
+			<td>1</td>
+			<td>山东华达物流有限公司</td>
+			<td>864654654646784545</td>
+			<td>山东省-济南市-历下区</td>
+			<td>谢逊</td>
+			<td>345848415451111545</td>
+			<td>身份证</td>
+		</tr>
+		<tr target="sid_user" rel="1">
+			<td>1</td>
+			<td>济南互联美容有限公司</td>
+			<td>5498765546465478715</td>
+			<td>山东省-济南市-历下区</td>
+			<td>周芷若</td>
+			<td>632485461876546545646</td>
+			<td>身份证</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
