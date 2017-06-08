@@ -1,0 +1,186 @@
+<div class="pageHeader">
+	<form onsubmit="return navTabSearch(this);" action="demo/common/ajaxDone.html" method="get">
+		<div class="searchBar">
+			<table class="searchContent">
+				<tr>
+					<td>
+						起始日期：<input type="text" name="keyword" style="width: 60px" /> - <input type="text" name="keyword" style="width: 60px"  />
+					</td>
+					<td>
+						到期日期：<input type="text" name="keyword"  style="width: 60px" /> - <input type="text" name="keyword"  style="width: 60px" />
+					</td>
+					<td>
+						公司名称：<input type="text" name="keyword" />
+					</td>
+					<td>
+						<label>合同类型：</label>
+						<select name="type" class=" combox">
+							<option value="1">全部</option>
+						</select>
+					</td>
+					<td>
+						<label>投资类型：</label>
+						<select name="type" class=" combox">
+							<option value="1">全部</option>
+						</select>
+					</td>
+					<td>
+						<label>投向种类：</label>
+						<select name="type" class=" combox">
+							<option value="1">全部</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						合同金额：<input type="text" name="keyword"  style="width: 60px" /> - <input type="text" name="keyword" style="width: 60px"  />
+					</td>
+					<td>
+						约定回报：<input type="text" name="keyword"  style="width: 60px" /> - <input type="text" name="keyword"  style="width: 60px" />
+					</td>
+					<td>
+						模糊查询：<input type="text" name="keyword" />
+					</td>
+					<td>
+						<label>主担保方式：</label>
+						<select name="type" class=" combox">
+							<option value="1">全部</option>
+						</select>
+					</td>
+					<td>
+						<label>是否逾期：</label>
+						<select name="type" class=" combox">
+							<option value="1">否</option>
+							<option value="12">是</option>
+						</select>
+					</td>
+					<td   >
+						<div class="buttonActive">	<div class="buttonContent"><button type="button"> &nbsp;搜 索 &nbsp;</button></div></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="contract_bonds_detail.html" target="dialog" height="720" mask="true"><span>新增</span></a></li>
+			<li><a class="edit" href="contract_bonds_detail.html?uid={sid_user}" target="dialog" height="720" mask="true"><span>修改</span></a></li>
+			<li><a class="edit" href="contract_bonds_detail.html?uid={sid_user}" target="dialog" height="720" mask="true"
+			><span>查看</span></a>
+			</li>
+			<li><a class="delete" href="demo/common/ajaxDone.html" target="ajaxTodo"
+				   title="确定要删除吗?"><span>删除</span></a></li>
+			<li><a class="icon"><span>确认</span></a></li>
+			<li class="line">line</li>
+			<li><a class="edit" href="contract_bonds_guarantee.html" target="navTab"><span>担保合同</span></a></li>
+			<li><a class="edit" href="contract_bonds_invest.html" target="navTab"><span>投资单</span></a></li>
+			<li><a class="edit" href="contract_bonds_income.html" target="navTab"><span>收益单</span></a></li>
+		</ul>
+	</div>
+	<table class="table" width="100%" layoutH="138">
+		<thead>
+		<tr>
+			<th width="40" align="center">序号</th>
+			<th width="60" align="center">状态</th>
+			<th width="60" align="center">合同类型</th>
+			<th width="80" align="center">合同号</th>
+			<th width="80" align="center">合同名称</th>
+			<th width="100" align="center">客户名称</th>
+			<th width="80" align="center">客户证件类型</th>
+			<th width="100" align="center">证件号码</th>
+			<th width="100" align="center">合同金额</th>
+			<th width="80" align="center">合同签订日期</th>
+			<th width="80" align="center">起始日期</th>
+			<th width="80" align="center">到期日期</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr target="sid_user" rel="1">
+			<td>1</td>
+			<td>确认</td>
+			<td>公司</td>
+			<td>YAGS-2017-09</td>
+			<td>投资业务合同</td>
+			<td>山东科美科技有限公司</td>
+			<td>社会信用代码</td>
+			<td>29385739203816293</td>
+			<td>2000000</td>
+			<td>2017-3-2</td>
+			<td>2017-3-2</td>
+			<td>2018-3-1</td>
+		</tr>
+		<tr target="sid_user" rel="1">
+			<td>2</td>
+			<td>确认</td>
+			<td>公司</td>
+			<td>YAGS-2017-09</td>
+			<td>投资业务合同</td>
+			<td>山东科美科技有限公司</td>
+			<td>社会信用代码</td>
+			<td>29385739203816293</td>
+			<td>2000000</td>
+			<td>2017-3-2</td>
+			<td>2017-3-2</td>
+			<td>2018-3-1</td>
+		</tr>
+		<tr target="sid_user" rel="1">
+			<td>3</td>
+			<td>确认</td>
+			<td>公司</td>
+			<td>YAGS-2017-09</td>
+			<td>投资业务合同</td>
+			<td>山东科美科技有限公司</td>
+			<td>社会信用代码</td>
+			<td>29385739203816293</td>
+			<td>2000000</td>
+			<td>2017-3-2</td>
+			<td>2017-3-2</td>
+			<td>2018-3-1</td>
+		</tr>
+		<tr target="sid_user" rel="1">
+			<td>4</td>
+			<td>确认</td>
+			<td>公司</td>
+			<td>YAGS-2017-09</td>
+			<td>投资业务合同</td>
+			<td>山东科美科技有限公司</td>
+			<td>社会信用代码</td>
+			<td>29385739203816293</td>
+			<td>2000000</td>
+			<td>2017-3-2</td>
+			<td>2017-3-2</td>
+			<td>2018-3-1</td>
+		</tr>
+		<tr target="sid_user" rel="1">
+			<td>5</td>
+			<td>确认</td>
+			<td>公司</td>
+			<td>YAGS-2017-09</td>
+			<td>投资业务合同</td>
+			<td>山东科美科技有限公司</td>
+			<td>社会信用代码</td>
+			<td>29385739203816293</td>
+			<td>2000000</td>
+			<td>2017-3-2</td>
+			<td>2017-3-2</td>
+			<td>2018-3-1</td>
+		</tr>
+		<tr target="sid_user" rel="1">
+			<td>6</td>
+			<td>确认</td>
+			<td>公司</td>
+			<td>YAGS-2017-09</td>
+			<td>投资业务合同</td>
+			<td>山东科美科技有限公司</td>
+			<td>社会信用代码</td>
+			<td>29385739203816293</td>
+			<td>2000000</td>
+			<td>2017-3-2</td>
+			<td>2017-3-2</td>
+			<td>2018-3-1</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
