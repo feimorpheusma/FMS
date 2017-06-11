@@ -30,7 +30,7 @@ ul,li{padding:0;margin:0; font-size:12px;list-style:none; border:0;font-weight:n
     <input type="password" id="userpwd" name="userpwd" maxlength="20" onblur="check_pw();" />
     <input type="text" id="validatecode" name="validatecode" value="验证码..." maxlength="20" onfocus="check_yzm(1)" onblur="check_yzm(2);">
     <a href="javaScript:getVcode2()" title="点击，换一张！"><img src="/include/captcha/captcha.php" id="vcodesrc" name="vcodesrc" border="0" width="116" height="38" style="float:left;display:none" alt="点击，换一张！"  /></a>
-    <input type="button" value="" id="login_bt" name="login_bt" onclick="logincheck()"/>
+    <input type="button" value="" id="login_bt" name="login_bt" onclick="window.location.href='default.html';"/>
     <a href="" class="forget">忘记密码？</a>
     <input type="hidden"  id="is_cs" name="is_cs" value="0" />
     <input type="hidden"  id="is_get" name="is_get" value="1" />
