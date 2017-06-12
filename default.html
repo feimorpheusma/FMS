@@ -135,19 +135,38 @@ $(function(){
 				<div class="toggleCollapse"><h2>民间融资</h2><div>收缩</div></div>
 
 				<div class="accordion" fillSpace="sidebar">
-					<div class="accordionHeader">
+					<!--<div class="accordionHeader">
 						<h2><span>Folder</span>基本信息管理</h2>
-					</div>
+					</div>-->
 					<div class="accordionContent">
+
+						<ul class="tree treeFolder">
+							<li><a href="company.html" target="navTab" rel="company" title="基本信息">基本信息管理</a>
+								<ul>
+									<li><a href="company.html" target="navTab"  rel="company">基本信息</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tree treeFolder">
+							<li><a href="client_personal.html" target="navTab" rel="client_personal" title="个人客户信息">业务数据管理</a>
+								<ul>
+									<li><a href="client_personal.html" target="navTab" rel="client_personal">个人客户信息</a></li>
+									<li><a href="client_public.html" target="navTab" rel="client_public">对公客户信息</a></li>
+									<li><a href="contract_bonds.html" target="navTab" rel="contract_bonds">债券、短期财务投资合同</a></li>
+									<li><a href="contract_equity.html" target="navTab" rel="contract_equity">股权投资合同</a></li>
+									<li><a href="contract_financing.html" target="navTab" rel="contract_financing">融资合同</a></li>
+									<li><a href="report.html" target="navTab" rel="report">业务报表填写</a></li>
+								</ul>
+							</li>
+						</ul>
 						<ul class="tree treeFolder ">
-							<li><a href="company.html" target="navTab"  rel="company">基本信息</a></li>
 							<!--<li><a href="partner.html" target="navTab">股东信息</a></li>
 							<li><a href="manager.html" target="navTab">高管人员</a></li>
 							<li><a href="employee.html" target="navTab">员工信息</a></li>
 							<li><a href="organization.html" target="navTab">公司架构</a></li>
 							<li><a href="branch.html" target="navTab">分支机构</a></li>-->
 						</ul>
-					</div>
+					</div><!--
 					<div class="accordionHeader">
 						<h2><span>Folder</span>业务数据管理</h2>
 					</div>
@@ -160,7 +179,7 @@ $(function(){
 							<li><a href="contract_financing.html" target="navTab" rel="contract_financing">融资合同</a></li>
 							<li><a href="report.html" target="navTab" rel="report">业务报表填写</a></li>
 						</ul>
-					</div>
+					</div>-->
 				</div>
 			</div>
 		</div>
@@ -314,7 +333,7 @@ $(function(){
 								</div>
 							</div>
 						</div>
-						
+
 					</div>
 					
 				</div>
